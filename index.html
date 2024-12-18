@@ -12,71 +12,152 @@
     </header>
 
     <main>
-        <section id="crossword">
-            <table>
-                <tbody>
-                    <!-- Baris 1 -->
-                    <tr>
-                        <td><input type="text" maxlength="1" data-answer="S"></td>
-                        <td><input type="text" maxlength="1" data-answer="H"></td>
-                        <td><input type="text" maxlength="1" data-answer="O"></td>
-                        <td><input type="text" maxlength="1" data-answer="P"></td>
-                        <td><input type="text" maxlength="1" data-answer="E"></td>
-                        <td><input type="text" maxlength="1" data-answer="E"></td>
-                    </tr>
-
-                    <!-- Baris 2 -->
-                    <tr>
-                        <td><input type="text" maxlength="1" data-answer="F"></td>
-                        <td><input type="text" maxlength="1" data-answer="L"></td>
-                        <td><input type="text" maxlength="1" data-answer="A"></td>
-                        <td><input type="text" maxlength="1" data-answer="S"></td>
-                        <td><input type="text" maxlength="1" data-answer="H"></td>
-                        <td></td>
-                    </tr>
-
-                    <!-- Baris 3 -->
-                    <tr>
-                        <td><input type="text" maxlength="1" data-answer="V"></td>
-                        <td><input type="text" maxlength="1" data-answer="O"></td>
-                        <td><input type="text" maxlength="1" data-answer="U"></td>
-                        <td><input type="text" maxlength="1" data-answer="C"></td>
-                        <td><input type="text" maxlength="1" data-answer="H"></td>
-                        <td><input type="text" maxlength="1" data-answer="E"></td>
-                    </tr>
-
-                    <!-- Baris 4 -->
-                    <tr>
-                        <td><input type="text" maxlength="1" data-answer="L"></td>
-                        <td><input type="text" maxlength="1" data-answer="I"></td>
-                        <td><input type="text" maxlength="1" data-answer="V"></td>
-                        <td><input type="text" maxlength="1" data-answer="E"></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-
-                    <!-- Baris 5 -->
-                    <tr>
-                        <td><input type="text" maxlength="1" data-answer="C"></td>
-                        <td><input type="text" maxlength="1" data-answer="A"></td>
-                        <td><input type="text" maxlength="1" data-answer="S"></td>
-                        <td><input type="text" maxlength="1" data-answer="H"></td>
-                        <td><input type="text" maxlength="1" data-answer="B"></td>
-                        <td><input type="text" maxlength="1" data-answer="A"></td>
-                    </tr>
-                </tbody>
-            </table>
+        <!-- Section untuk Teka-Teki Silang -->
+        <section id="crossword-section">
+            <h2 class="section-title">Teka-Teki Silang</h2>
+            <div id="crossword">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>S</td>
+                            <td><input type="text" maxlength="1" data-answer="H"></td>
+                            <td><input type="text" maxlength="1" data-answer="O"></td>
+                            <td><input type="text" maxlength="1" data-answer="P"></td>
+                            <td><input type="text" maxlength="1" data-answer="E"></td>
+                            <td><input type="text" maxlength="1" data-answer="E"></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><input type="text" maxlength="1" data-answer="F"></td>
+                            <td>L</td>
+                            <td><input type="text" maxlength="1" data-answer="A"></td>
+                            <td><input type="text" maxlength="1" data-answer="S"></td>
+                            <td><input type="text" maxlength="1" data-answer="H"></td>
+                            <td>S</td>
+                            <td><input type="text" maxlength="1" data-answer="A"></td>
+                            <td><input type="text" maxlength="1" data-answer="L"></td>
+                            <td><input type="text" maxlength="1" data-answer="E"></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><input type="text" maxlength="1" data-answer="V"></td>
+                            <td><input type="text" maxlength="1" data-answer="O"></td>
+                            <td><input type="text" maxlength="1" data-answer="U"></td>
+                            <td><input type="text" maxlength="1" data-answer="C"></td>
+                            <td><input type="text" maxlength="1" data-answer="H"></td>
+                            <td><input type="text" maxlength="1" data-answer="E"></td>
+                            <td>R</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><input type="text" maxlength="1" data-answer="L"></td>
+                            <td><input type="text" maxlength="1" data-answer="I"></td>
+                            <td>V</td>
+                            <td><input type="text" maxlength="1" data-answer="E"></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><input type="text" maxlength="1" data-answer="C"></td>
+                            <td>A</td>
+                            <td><input type="text" maxlength="1" data-answer="S"></td>
+                            <td><input type="text" maxlength="1" data-answer="H"></td>
+                            <td>B</td>
+                            <td><input type="text" maxlength="1" data-answer="A"></td>
+                            <td><input type="text" maxlength="1" data-answer="C"></td>
+                            <td><input type="text" maxlength="1" data-answer="K"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
 
+        <!-- Section Kontrol -->
         <section id="controls">
-            <button id="check-answers">Periksa Jawaban</button>
+            <button id="check-answers" aria-label="Periksa jawaban teka-teki silang">Periksa Jawaban</button>
+            <button id="reset-crossword">Reset</button>
             <p id="result"></p>
-                 <br>
-                    <br>
-                    <br>
-                    <p>1. aplikasi e-commerce terkenal nomor 1 di asia</p>
         </section>
 
-        <script src="script.js"></script>
+        <!-- Section Clue -->
+        <section id="clue-section" aria-labelledby="clue-heading">
+            <h2 id="clue-heading">Clue</h2>
+            <ul>
+                <li>1. aplikasi e-commerce terkenal nomor 1 di Asia</li>
+                <li>2. Program promosi Shopee dengan diskon besar dalam waktu terbatas</li>
+                <li>3. Penawaran berupa potongan harga</li>
+                <li>4. Fitur streaming untuk penjual di Shopee</li>
+                <li>5. Pengembalian dana berupa saldo setelah transaksi</li>
+            </ul>
+        </section>
+<br>
+        <!-- Section Profil -->
+        <h2 class="section-title">Profile Cards</h2>
+        <section class="profile-section">
+            <!-- Kartu-kartu profil -->
+            <div class="card">
+                <img src="img/myphoto.jpg" alt="My Profile Picture">
+                <div class="card-content">
+                    <p>My name is Lorem Ipsum</p>
+                    <p>Passionate about web development.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/ayuu.jpg" alt="Profile Picture">
+                <div class="card-content">
+                    <p>Enthusiast in UX Design</p>
+                    <p>Creating impactful solutions.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="Profile Picture">
+                <div class="card-content">
+                    <p>Passionate Developer</p>
+                    <p>Specializing in Frontend technologies.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="Profile Picture">
+                <div class="card-content">
+                    <p>Creative Designer</p>
+                    <p>Focused on aesthetic interfaces.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="Profile Picture">
+                <div class="card-content">
+                    <p>Freelance Programmer</p>
+                    <p>Exploring diverse technologies.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="Profile Picture">
+                <div class="card-content">
+                    <p>Team Player</p>
+                    <p>Working collaboratively for success.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="Profile Picture">
+                <div class="card-content">
+                    <p>Problem Solver</p>
+                    <p>Addressing challenges with creativity.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="Profile Picture">
+                <div class="card-content">
+                    <p>Data Scientist</p>
+                    <p>Analyzing trends and insights.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Game Teka-Teki Silang. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

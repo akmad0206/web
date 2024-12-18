@@ -146,9 +146,6 @@ h1, h2 {
 .card img {
   width: 150px;
   height: 150px;
-  border-radius: 8px;
-  text-align: center;
-  
 }
 
 .card-content {

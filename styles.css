@@ -19,6 +19,75 @@ header {
   text-align: center;
 }
 
+/* Tombol Navigasi */
+nav {
+  display: flex;
+  justify-content: center;
+
+}
+
+/* Navigasi di kanan atas */
+#main-navigation {
+  position: sticky;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px;
+}
+
+/* Tombol Navigasi Bulat */
+.nav-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2cd52c;
+  color: white;
+  border: none;
+  border-radius: 50%; /* Membuat tombol bulat */
+  width: 50px; /* Lebar tombol */
+  height: 50px; /* Tinggi tombol */
+  font-size: 1.2rem; /* Ukuran ikon */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Ikon di Tengah Tombol */
+.nav-btn i {
+  margin: 0;
+}
+
+/* Efek Hover */
+.nav-btn:hover {
+  background-color: #009a12;
+  transform: scale(1.1);
+}
+
+/* Responsif untuk Tampilan Mobile */
+@media (max-width: 768px) {
+  #main-navigation {
+      justify-content: center; /* Pusatkan tombol di layar kecil */
+  }
+
+  .nav-btn {
+      width: 40px; /* Lebar lebih kecil untuk layar kecil */
+      height: 40px;
+      font-size: 1rem;
+  }
+}
+
+
+/* Tombol Navigasi Home Tersembunyi */
+#main-navigation #profile-btn {
+  display: none; /* Default: hanya Home yang terlihat */
+}
+
+#profile-section ~ footer + #main-navigation #profile-btn {
+  display: inline-flex; /* Muncul di Profile Cards */
+}
+
 main {
   padding: 2rem;
   max-width: 1200px;
@@ -110,7 +179,7 @@ h1, h2 {
 }
 
 /* Kartu Profil */
-.profile-section {
+#profile-section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
@@ -146,6 +215,7 @@ h1, h2 {
 .card img {
   width: 150px;
   height: 150px;
+  object-fit: cover;
 }
 
 .card-content {
@@ -157,6 +227,11 @@ h1, h2 {
   line-height: 1.5;
   color: #333;
 }
+
+.card p:first-of-type {
+  font-weight: bold;
+}
+
 
 /* Footer */
 footer {

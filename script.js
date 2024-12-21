@@ -31,3 +31,24 @@ document.getElementById('reset-crossword').addEventListener('click', function ()
     });
     document.getElementById('result').textContent = '';
 });
+
+function navigateTo(sectionId) {
+    const section = document.getElementById(sectionId);
+    const homeBtn = document.querySelector('#main-navigation .nav-btn:nth-child(1)');
+    const profileBtn = document.querySelector('#main-navigation .nav-btn:nth-child(2)');
+
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+
+        // Atur visibilitas tombol berdasarkan lokasi
+        if (sectionId === 'profile-section') {
+            profileBtn.style.display = "none";
+            homeBtn.style.display = "inline-flex";
+        } else {
+            homeBtn.style.display = "none";
+            profileBtn.style.display = "inline-flex";
+        }
+    }
+}
+
+
